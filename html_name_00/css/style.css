@@ -1,0 +1,391 @@
+/* ここから下に記載していく */
+*, *::before, *::after {
+  box-sizing: border-box;
+
+.header-container {
+  width: 100%;
+}
+
+.header-inner {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;   
+}
+
+.header-left,
+.header-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.header-right {
+  justify-content: flex-start; /* 右半分の左端＝画面中央から開始 */
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 50px;              /* 項目間 50px */
+  font-size: 16px;        /* 画像の比率だと21pxは少し大きめ */
+  margin: 0;
+  padding: 50px 40px 50px 0; /* 上50 / 右40 / 下50 / 左0 ← 左0が重要 */
+  list-style: none;
+}
+.header-nav a {
+    text-decoration: none;
+    color: #222222;
+}
+
+/* ロゴ部分 */
+.flexbox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.front-large {
+  font-family: "Times New Roman", "Georgia", serif;
+  font-size: 64px;        /* 2行分の高さに合わせる */
+  font-weight: bold;
+  line-height: 1;
+}
+
+.text-side {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase; /* Tokyo → TOKYO */
+}
+
+.mainbg{
+  max-width: 1200px;
+  height: 600px;        /* 背景画像だけでは高さが出ないので指定する */
+  margin: 0 auto;
+  background-image: url("../img/mainbg.png");
+  background-size: cover;       /* 箱いっぱいに広げる */
+  background-position: center;  /* 画像の中央を見せる */
+  display: flex;
+  justify-content: center;      /* 文字を左右中央に */
+  align-items: center;
+  color: white         /* 文字を上下中央に */
+}
+.main-title{
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  line-height: 2;
+}
+.center{
+  font-size: 24px;
+  margin: 60px 0 30px;
+  text-align: center;
+  color: #ffd61a;
+  font-weight: bold;
+}
+
+.center-jat{
+   text-align: center;
+   font-size: 16px;
+}
+
+.center-ent{
+   text-align: center;
+   font-size: 24px;
+}
+
+.center-con{
+   text-align: center;
+   font-size: 16px;
+}
+
+.mt-10 { margin-top: 10px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mt-60 { margin-top: 60px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-60 { margin-bottom: 60px; }
+.mb-70 { margin-bottom: 70px; }
+.mb-80 { margin-bottom: 80px; }
+
+.aboutimg{
+  display: block;     /*img用の指定*/
+  max-width: 1200px;  
+  width: 100%;
+  height: auto;       /* 縦横比を保つ */
+  margin: 0 auto;     /* ページの中央に置く */
+}
+.course{
+  font-size: 24px;
+  margin: 60px 0 30px;
+  text-align: center;
+  color: #222222;
+  font-weight: bold;
+}
+.line {
+	text-align: center;
+  font-size: 18px;
+  line-height: calc(1em + 20px); 
+}
+.container{
+  display: flex;
+  max-width: 1200px;  
+  width: 100%;
+  margin: 0 auto; 
+  
+}
+.image-box,
+.text-box {
+  flex: 1;              /* 左右を半分ずつに */
+  min-width: 0;
+}
+.image-box img {
+  display: block;
+  width: 100%;          
+  height: 100%;
+  object-fit: cover;   /* 縦横比を保ち、はみ出た部分は切る */
+}
+.text-box {
+  flex: 1;
+  text-align: left; 
+  min-width: 0;
+}  
+.course-title{
+  margin: 120px 0 40px;
+  margin-left: 50px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.course-text{
+  width: 480px;
+  margin-left: 50px;
+  margin-bottom: 120px;
+  line-height: 1.8;
+}
+
+.container reverse{
+  display: flex;
+  max-width: 1200px;  
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;  
+}
+.container.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-box,
+.text-box {
+  flex: 1;   /* 左右を半分ずつに */
+  min-width: 0;
+  background-color: #fafafa;
+}
+.image-box img {
+  display: block;
+  width: 100%;          
+  height: 100%;
+  object-fit: cover;
+}
+.text-box2 {
+  flex: 1;
+  text-align: left; 
+  min-width: 0;
+  background-color: #fafafa;
+}  
+.course-title2{
+  width: 480px;
+  margin: 120px 0 40px auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+.course-text2{
+  width: 430px;
+  margin: 0 50px 50px auto;
+  line-height: 1.8;
+}
+.container2{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* カードを上揃えにし、高さを中身に合わせる */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container2-item{
+  width: 300px;
+}
+.container2-item img{
+  display: block;
+  width: 100%;              /* 箱の幅（300px）に合わせる */
+  height: 200px;
+  object-fit: cover;
+}
+.item-text{
+  font-size: 14px;
+  line-height: 1.6;
+}
+.item-date{
+ margin: 30px 0 24px; 
+}
+.more-wrap{
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.btn{
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none; 
+  background-color: chartreuse;
+  color: white;
+  border: 1px ; 
+  height: 60px;
+  width: 300px;
+  line-height: 60px;
+}
+.btn:hover{
+  background: #aba30e;          /* マウスを乗せたとき背景を塗る */
+  color: #fff;
+}
+
+.map {
+  max-width: 1200px;
+  margin-top: 60px;
+}
+
+.map iframe {
+  display: block;
+  width: 100%;      /* 箱の幅いっぱいに */
+  height: 300px;    /* デザインに合わせて調整 */
+  border: 0;
+}
+
+.profile-container{
+  margin: 0 auto;
+  width: fit-content;
+  padding: 60px 0;
+}
+
+.profile-row{
+  display: flex;
+  line-height: 50px;    /* これだけで行の間隔が決まる */
+
+}
+.profile-row:last-child {
+  margin-bottom: 0;
+}
+
+.profile-label{
+  width: 180px;
+  margin: 0;
+}
+.profile-value{
+  margin: 0;
+}
+
+.access{
+  max-width: 1200px;
+  padding-top: 60px;
+  background-color: #fafafa;
+  margin: 0 auto;
+}
+
+.center2{
+  font-size: 24px;
+  font-weight: 600;
+  margin: 60px 0 30px;
+  text-align: center;
+  color: #222222;
+}
+.center3 {
+    font-size: 16px;
+    text-align: center;
+    color: #222222;
+    line-height: 24px;
+}
+
+.profile-container2{
+  width: 640px;
+  margin: 0 auto;
+  border-top: 3px solid #bfbfbf;
+}
+
+.profile-row2{
+  display: flex;
+  border-bottom: 2px solid #bfbfbf;
+  font-size: 16px;
+}
+.profile-label2{
+  box-sizing: border-box;
+  width: 240px;
+  flex-shrink: 0;
+  padding-left: 16px;
+  border-right: 2px solid #bfbfbf; 
+  height: 52px;
+  align-items: center;
+  display: flex;
+}
+.profile-row2 input{
+  box-sizing: border-box;
+  width: 328px;
+  margin: 8px;
+  flex-shrink: 0;
+  border: 1px solid #cacaca;
+}
+.select1{
+  box-sizing: border-box;
+  width: 328px;
+  margin: 8px;
+  flex-shrink: 0;
+  border: 1px solid #cacaca;
+}
+.inquiry-option{
+    flex: 1;
+    padding: 24px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+.inquiry-option input[type="checkbox"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    background-color: #eeeae4;
+    border: none;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+.profile-label3{
+  box-sizing: border-box;
+  width: 240px;
+  flex-shrink: 0;
+  padding-left: 16px;
+  border-right: 2px solid #bfbfbf; 
+  height: 220px;
+  align-items: center;
+  display: flex;
+}
+.inquiry-option > label {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    white-space: nowrap;  
+}
+.mb-140 { margin-bottom: 140px; }
+
+.more-wrap2{
+  text-align: center;
+}
+.footer{
+  text-align: center;
+  background-color: #707070;
+  padding: 30px 0;
+  color: white;
+}
